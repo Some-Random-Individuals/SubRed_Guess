@@ -1,0 +1,26 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+    - master
+jobs:
+  main:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Install node packages
+      uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install
+    - name: Build
+      uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: build
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting:sub-red-guess
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
