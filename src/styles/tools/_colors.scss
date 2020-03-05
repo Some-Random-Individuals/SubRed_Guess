@@ -1,0 +1,26 @@
+// color palettes
+$color-map: (
+  polarnight: (
+    darker: #2e3440,
+    darklight: #3b4252,
+    lighter: #4c566a,
+  ),
+  snowstorm: (
+    lightgrey: #eceff4,
+    grey: #e5e9f0,
+    darkgrey: #d8dee9,
+  ),
+  frost: (
+    greenish: #8fbcbb,
+    purplegreyish: #81a1c1,
+    blueish: #5e81ac,
+    turquoise: #88c0d0,
+  ),
+  aurora: (
+    red: #bf616a,
+    orange: #d08770,
+    yellow: #ebcb8b,
+    green: #a3be8c,
+    purple: #b48ead,
+  ),
+);
